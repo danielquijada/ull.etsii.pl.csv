@@ -12,14 +12,14 @@ function calculate() {
   var original       = document.getElementById("original");
   var temp = original.value;
   var regexp = /\w*?,/g
-//   var regexp = /_____________________________________________/g;
+  var regexp = /_____________________________________________/g;
   var lines = temp.split(/\n+\s*/);
   var commonLength = NaN;
   var r = [];
   // Template using underscore
   var row = "<% _.each(items, function(name) { %>"     +
             "                    <td><%= name %></td>" +
-            "              <% }); %>";
+            "              <c% }); %>";
 
   if (window.localStorage) localStorage.original  = temp;
   
